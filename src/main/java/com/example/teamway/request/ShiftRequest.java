@@ -1,7 +1,6 @@
 package com.example.teamway.request;
 
 import com.example.teamway.validation.ValidShiftTime;
-import jakarta.validation.constraints.Max;
 
 import java.time.LocalDateTime;
 
@@ -10,8 +9,6 @@ public class ShiftRequest {
 
     private Long workerId;
 
-    @Max(10)
-    private int a;
     @ValidShiftTime
     private LocalDateTime startTime;
 
@@ -31,12 +28,5 @@ public class ShiftRequest {
         this.workerId = workerId;
     }
 
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
 }
 
