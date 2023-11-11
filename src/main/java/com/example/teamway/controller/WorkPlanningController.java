@@ -6,6 +6,7 @@ import com.example.teamway.repository.WorkerRepository;
 import com.example.teamway.request.ShiftRequest;
 import com.example.teamway.service.WorkPlanningService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,8 @@ public class WorkPlanningController {
     private WorkerRepository workerRepository;
 
     @GetMapping("/shifts")
-    public List<Shift> getShifts(@RequestParam LocalDateTime start, @RequestParam LocalDateTime end) {
+    public List<Shift> getShifts(@RequestParam("start") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
+                                 @RequestParam("end") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end) {
         return workPlanningService.getShiftsByDateRange(start, end);
     }
 

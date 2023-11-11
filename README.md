@@ -12,3 +12,8 @@
 ```bash
 mvn spring-boot:run
 ```
+
+
+## Postman Collection
+
+[https://dark-firefly-757527.postman.co/workspace/My-Workspace~59c5e6fd-99d1-4ca7-868c-531bbe4c7cc9/collection/8153757-f7f4836f-5a17-4f71-a89b-644bae846cf9?action=share&creator=8153757](https://dark-firefly-757527.postman.co/workspace/My-Workspace~59c5e6fd-99d1-4ca7-868c-531bbe4c7cc9/collection/8153757-f7f4836f-5a17-4f71-a89b-644bae846cf9?action=share&creator=8153757)
